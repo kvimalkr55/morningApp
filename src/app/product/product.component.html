@@ -1,0 +1,32 @@
+<div class="container shadow">
+
+    <h1>{{products[0].brand}}</h1>
+    <h1 class="text-center">All Products</h1>
+<div class="row">
+    <div class="col-md-4" *ngFor="let product of products">
+        <figure class="card card-product">
+            <div class="img-wrap"><img [src]='product.img'></div>
+            <figcaption class="info-wrap">
+                    <h4 class="title">{{product.brand}}</h4>
+                    <p class="desc">{{product.desc}}</p>
+                    <div class="rating-wrap">
+                        <div class="label-rating">{{product.reviews}} reviews</div>
+                        <div class="label-rating">{{product.orders}}  orders </div>
+                    </div> <!-- rating-wrap.// -->
+            </figcaption>
+            <div class="bottom-wrap">
+                <a href="" class="btn btn-sm btn-primary float-right">Order Now</a>	
+                <div class="price-wrap h5">
+                    <span class="price-new">${{product.offerprice}}</span> <del class="price-old">${{product.price}}</del>
+                </div> <!-- price-wrap.// -->
+            </div> <!-- bottom-wrap.// -->
+        </figure>
+    </div> <!-- col // -->
+  
+ 
+    </div> <!-- row.// -->
+
+</div>
+    
+    
+   
